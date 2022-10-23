@@ -1,8 +1,8 @@
 function App() {
   return (
-    <div>
-      App
-    </div>
+    <h1>
+      App nueva
+    </h1>
   );
 }
 
