@@ -6,7 +6,7 @@ const loadDb = require("./src/controllers/loadDb.js")
 const { User } = require("./db.js")
 
 const server = express();
-const port = 4000;
+const PORT = 4000;
 
 server.use(morgan("dev"));
 
@@ -17,7 +17,7 @@ server.get("/users", async (req, res) => {
 
 conn.sync({ force: true }).then(() => {
     loadDb();
-  server.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+  server.listen(process.env.PORT || PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
   });
 });
