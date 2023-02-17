@@ -1,8 +1,12 @@
+import { Fragment } from "react";
+import { Test } from "./components/Home/Test";
+
 function App() {
+  
   return (
-    <h1>
-      App nueva
-    </h1>
+    <Fragment>
+      <Test persona="Juanito"/>
+    </Fragment>
   );
 }
 
