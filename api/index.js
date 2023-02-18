@@ -4,11 +4,13 @@ const { conn } = require("./db.js");
 const bodyParser = require('body-parser');
 const loadDb = require("./src/controllers/loadDb.js")
 const { User } = require("./db.js")
+const cors = require("cors")
 
 const server = express();
 const PORT = 4000;
 
 server.use(morgan("dev"));
+server.use(cors())
 
 server.get("/users", async (req, res) => {
   let users = await User.findAll()

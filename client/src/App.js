@@ -1,11 +1,10 @@
 import { Fragment } from "react";
-import { Test } from "./components/Home/Test";
+import Home from "./components/Home/Home";
 
 function App() {
-  
   return (
     <Fragment>
-      <Test persona="Juanito"/>
+      <Home />
     </Fragment>
   );
 }
